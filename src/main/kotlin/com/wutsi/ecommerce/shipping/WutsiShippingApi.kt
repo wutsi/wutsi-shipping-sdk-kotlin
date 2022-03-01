@@ -26,9 +26,9 @@ public interface WutsiShippingApi {
   @Headers(value=["Content-Type: application/json"])
   public fun getShipping(@Param("id") id: Long): GetShippingResponse
 
-  @RequestLine("POST /v1/shippings/{id}/attributes{name}")
+  @RequestLine("POST /v1/shippings/{id}/attributes/{name}")
   @Headers(value=["Content-Type: application/json"])
-  public fun updateShipping(
+  public fun updateShippingAttribute(
     @Param("id") id: Long,
     @Param("name") name: String,
     request: UpdateShippingAttributeRequest
