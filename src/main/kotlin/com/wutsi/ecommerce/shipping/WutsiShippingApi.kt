@@ -5,11 +5,12 @@ import com.wutsi.ecommerce.shipping.dto.CreateShippingResponse
 import com.wutsi.ecommerce.shipping.dto.GetShippingResponse
 import com.wutsi.ecommerce.shipping.dto.ListShippingResponse
 import com.wutsi.ecommerce.shipping.dto.SaveRateRequest
-import com.wutsi.ecommerce.shipping.dto.UpdateShippingRequest
+import com.wutsi.ecommerce.shipping.dto.UpdateShippingAttributeRequest
 import feign.Headers
 import feign.Param
 import feign.RequestLine
 import kotlin.Long
+import kotlin.String
 import kotlin.Unit
 
 public interface WutsiShippingApi {
@@ -25,9 +26,13 @@ public interface WutsiShippingApi {
   @Headers(value=["Content-Type: application/json"])
   public fun getShipping(@Param("id") id: Long): GetShippingResponse
 
-  @RequestLine("POST /v1/shippings/{id}")
+  @RequestLine("POST /v1/shippings/{id}/attributes{name}")
   @Headers(value=["Content-Type: application/json"])
-  public fun updateShipping(@Param("id") id: Long, request: UpdateShippingRequest): Unit
+  public fun updateShipping(
+    @Param("id") id: Long,
+    @Param("name") name: String,
+    request: UpdateShippingAttributeRequest
+  ): Unit
 
   @RequestLine("POST /v1/rates")
   @Headers(value=["Content-Type: application/json"])
