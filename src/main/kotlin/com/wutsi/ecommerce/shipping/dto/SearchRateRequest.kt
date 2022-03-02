@@ -1,12 +1,11 @@
 package com.wutsi.ecommerce.shipping.dto
 
-import kotlin.Double
 import kotlin.Long
 import kotlin.String
+import kotlin.collections.List
 
-public data class SaveRateRequest(
-  public val shippingId: Long = 0,
+public data class SearchRateRequest(
   public val country: String = "",
   public val cityId: Long? = null,
-  public val amount: Double = 0.0
+  public val products: List<Product> = emptyList()
 )

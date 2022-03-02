@@ -1,8 +1,11 @@
 package com.wutsi.ecommerce.shipping.dto
 
+import kotlin.Long
 import kotlin.String
 
 public data class CreateShippingRequest(
   public val type: String = "",
+  public val country: String = "",
+  public val cityId: Long? = null,
   public val message: String? = null
 )

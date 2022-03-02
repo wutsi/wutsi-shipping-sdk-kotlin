@@ -4,7 +4,8 @@ import com.wutsi.ecommerce.shipping.dto.CreateShippingRequest
 import com.wutsi.ecommerce.shipping.dto.CreateShippingResponse
 import com.wutsi.ecommerce.shipping.dto.GetShippingResponse
 import com.wutsi.ecommerce.shipping.dto.ListShippingResponse
-import com.wutsi.ecommerce.shipping.dto.SaveRateRequest
+import com.wutsi.ecommerce.shipping.dto.SearchRateRequest
+import com.wutsi.ecommerce.shipping.dto.SearchRateResponse
 import com.wutsi.ecommerce.shipping.dto.UpdateShippingAttributeRequest
 import feign.Headers
 import feign.Param
@@ -34,11 +35,7 @@ public interface WutsiShippingApi {
     request: UpdateShippingAttributeRequest
   ): Unit
 
-  @RequestLine("POST /v1/rates")
+  @RequestLine("POST /v1/rates/search")
   @Headers(value=["Content-Type: application/json"])
-  public fun saveRate(request: SaveRateRequest): Unit
-
-  @RequestLine("DELETE /v1/rates/{id}")
-  @Headers(value=["Content-Type: application/json"])
-  public fun deleteRate(@Param("id") id: Long): Unit
+  public fun searchRate(request: SearchRateRequest): SearchRateResponse
 }
