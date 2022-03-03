@@ -5,6 +5,7 @@ import kotlin.String
 import kotlin.collections.List
 
 public data class SearchRateRequest(
+  public val shippingId: Long? = null,
   public val country: String = "",
   public val cityId: Long? = null,
   public val products: List<Product> = emptyList()
