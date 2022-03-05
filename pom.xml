@@ -6,7 +6,7 @@
 
   <artifactId>wutsi-shipping-sdk-kotlin</artifactId>
   <groupId>com.wutsi.ecommerce.shipping</groupId>
-  <version>0.0.9-SNAPSHOT</version>
+  <version>0.0.9</version>
   <packaging>jar</packaging>
 
   <name>wutsi-shipping-sdk-kotlin</name>
@@ -54,7 +54,7 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/wutsi/wutsi-shipping-sdk-kotlin.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>wutsi-shipping-sdk-kotlin-0.0.9</tag>
   </scm>
   <distributionManagement>
     <repository>
