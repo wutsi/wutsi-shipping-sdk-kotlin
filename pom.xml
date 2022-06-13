@@ -6,7 +6,7 @@
 
   <artifactId>wutsi-shipping-sdk-kotlin</artifactId>
   <groupId>com.wutsi.ecommerce.shipping</groupId>
-  <version>0.0.24-SNAPSHOT</version>
+  <version>0.0.25-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>wutsi-shipping-sdk-kotlin</name>
@@ -16,9 +16,13 @@
 
     <feign.version>11.8</feign.version>
     <javax-validation.version>2.0.1.Final</javax-validation.version>
+<<<<<<< HEAD
     <kotlin.version>1.6.21</kotlin.version>
 
     <wutsi-order.version>0.0.28</wutsi-order.version>
+=======
+    <kotlin.version>1.7.0</kotlin.version>
+>>>>>>> 46e20941c2a5c08cf213291b75b88a861ad20b0c
   </properties>
 
   <dependencies>
