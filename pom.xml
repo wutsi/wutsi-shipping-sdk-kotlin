@@ -16,13 +16,9 @@
 
     <feign.version>11.8</feign.version>
     <javax-validation.version>2.0.1.Final</javax-validation.version>
-<<<<<<< HEAD
-    <kotlin.version>1.6.21</kotlin.version>
+    <kotlin.version>1.7.0</kotlin.version>
 
     <wutsi-order.version>0.0.28</wutsi-order.version>
-=======
-    <kotlin.version>1.7.0</kotlin.version>
->>>>>>> 46e20941c2a5c08cf213291b75b88a861ad20b0c
   </properties>
 
   <dependencies>
