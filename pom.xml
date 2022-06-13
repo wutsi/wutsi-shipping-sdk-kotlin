@@ -17,9 +17,18 @@
     <feign.version>11.8</feign.version>
     <javax-validation.version>2.0.1.Final</javax-validation.version>
     <kotlin.version>1.6.21</kotlin.version>
+
+    <wutsi-order.version>0.0.28</wutsi-order.version>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>com.wutsi.ecommerce.order</groupId>
+      <artifactId>wutsi-order-sdk-kotlin</artifactId>
+      <version>${wutsi-order.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
     <dependency>
       <groupId>io.github.openfeign</groupId>
       <artifactId>feign-core</artifactId>
@@ -51,6 +60,18 @@
       <version>${kotlin.version}</version>
     </dependency>
   </dependencies>
+
+  <repositories>
+    <repository>
+      <id>maven</id>
+      <name>maven</name>
+      <url>https://repo1.maven.org/maven2</url>
+    </repository>
+    <repository>
+      <id>github</id>
+      <url>https://maven.pkg.github.com/wutsi/*</url>
+    </repository>
+  </repositories>
 
   <scm>
     <developerConnection>scm:git:https://github.com/wutsi/wutsi-shipping-sdk-kotlin.git</developerConnection>
